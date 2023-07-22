@@ -40,23 +40,23 @@ function App() {
     const token = localStorage.getItem('token');
     if (token) {
       auth.checkToken(token).then((response) => {
-        if (response) {
-          setUserEmail(response.data.email);
-          setLoggedIn(true);
-          navigate('/', { replace: true });
-        }
+        setUserEmail(response.data.email);
+        setLoggedIn(true);
+        navigate('/', { replace: true });
       });
     }
-  }, [navigate]);
+  }, []);
 
   React.useEffect(() => {
-    Promise.all([api.getUserInfo(), api.getInitialCards()])
-      .then(([user, cards]) => {
-        setCurrentUser(user);
-        setCards(cards);
-      })
-      .catch(console.error);
-  }, []);
+    if (loggedIn) {
+      Promise.all([api.getUserInfo(), api.getInitialCards()])
+        .then(([user, cards]) => {
+          setCurrentUser(user);
+          setCards(cards);
+        })
+        .catch(console.error);
+    }
+  }, [loggedIn]);
 
   React.useEffect(() => {
     function handleEscapeClose(event) {
