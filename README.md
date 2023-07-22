@@ -8,6 +8,7 @@
 
 ### Технологии проекта
   * [React](https://react.dev/)
+  * [React Router](https://reactrouter.com/en/main)
   * [Webpack](https://webpack.js.org/)
   * [HTML](https://html.spec.whatwg.org/multipage/)
   * [CSS](https://www.w3.org/Style/CSS/)
