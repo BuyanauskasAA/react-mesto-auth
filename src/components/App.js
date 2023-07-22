@@ -240,8 +240,8 @@ function App() {
               />
             }
           />
-          <Route path="/sign-in" element={<Login onAuthorize={handleAuthorize} />} />
-          <Route path="/sign-up" element={<Register onRegister={handleRegister} />} />
+          <Route path="/sign-in" element={<Login onSubmit={handleAuthorize} />} />
+          <Route path="/sign-up" element={<Register onSubmit={handleRegister} />} />
         </Routes>
 
         <EditAvatarPopup
