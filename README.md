@@ -1,4 +1,4 @@
-# [Проект: Место](https://buyanauskasaa.github.io/mesto-react/)
+# [Проект: Место](https://buyanauskasaa.github.io/react-mesto-auth/)
 
 ### Проект Место — это веб-сервис, куда можно добавлять фотографии, удалять их и ставить лайки.
 
